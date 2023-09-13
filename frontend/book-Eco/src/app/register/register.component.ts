@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class RegisterComponent {
 
+ users:any = []
+  user:any = {
+  // username:"",
+  // pwd: "",
+
+  }
+  register(username:any,password:any,repassword:any){
+    // this.user.push(username,password,repassword)
+    this.user.username = username
+    this.user.password = password
+    this.user.repassword = repassword
+   this.users.push(this.user)
+   console.log(this.users)
+
+  }
 }
