@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body{
     background-color: #f4f4f4;
@@ -149,9 +149,9 @@ div.new{
     display: inline-block;
 }
 .table tbody td.item img{
-    width: 200px;
-    height: 100px;
-    object-fit: contain;
+    width: 50%;
+    height: 20%;
+    /* object-fit: contain; */
 }
 .table thead th.header{
     text-align: left;
@@ -252,6 +252,8 @@ button.btn:hover{
     box-shadow: none;
     outline: none;
 }
+
+
 @media(max-width:760px){
     .table.activitites thead::after{
         top: 35px;

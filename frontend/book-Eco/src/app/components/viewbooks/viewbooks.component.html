@@ -12,8 +12,8 @@
     <div class="notification alert alert-dismissible fade show text-white bg-dark d-flex align-items-center my-3 text-justify"
         role="alert">
         <span class="far fa-bell pr-2"></span>
-        You've got 6 books new items on your list 
-        
+        You've got 6 books new items on your list
+
     </div>
     <div id="table" class="bg-white rounded">
         <div class="d-md-flex align-items-md-center px-3 pt-3">
@@ -34,13 +34,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor="let book of books">
                         <td class="item">
                             <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/hGf9HQYp/becoming.webp"
-                                 alt="">
+                                <img [src]="book.image" alt="" class="bookimg m-3">
                                 <div>
-                                    Becoming
+                                    {{book.bookName}}
                                     <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
                                     <div>
                                         <a href="#">
@@ -54,148 +53,17 @@
                             </div>
                         </td>
                         <td>
-                            Michelle Obama
+                            {{book.author}}
                         </td>
                         <td>
-                           R299
+                            {{book.sellingPrice}}
                         </td>
-                       <td>a tale of a young girl born in Chicago and takes us through her growing and formative years. 
-                       </td>
-                    </tr>
-                    <tr>
-                        <td class="item">
-                            <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/Dyv49bJL/hlomu-the-wife.webp"
-                                    alt="">
-                                <div>
-                                  Hlomu the wife
-                                    <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <div class="text-muted"></div>
-                                        <div><a href="#"><span class="red text-uppercase"><span
-                                                        class="fas fa-comment pr-1"></span> Update Book</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <td>{{book.description}}
                         </td>
-                        <td>
-                            Dudu Busani-Dube
-                        </td>
-                        <td>
-                           R499
-                        </td>
-                       <td>a love story that takes its cues from life in a South African township.
-                       </td>
-                        
-                    </tr>
-                    <tr>
-                        <td class="item">
-                            <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/CxrDZqk1/higher-is-waiting.webp"
-                                    alt="">
-                                <div>
-                                  Higher is waiting
-                                    <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <div class="text-muted"></div>
-                                        <div><a href="#"><span class="red text-uppercase"><span
-                                                        class="fas fa-comment pr-1"></span> Update Book</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Tyler Perry
-                        </td>
-                        <td>
-                           R599
-                        </td>
-                       <td>Tyler Perry writes of how his faith has sustained him in hard times
-                       </td>
-                    </tr>
-                    <tr>
-                        <td class="item">
-                            <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/qRkJcm8x/The-undifited-Mind.jpg"
-                                    alt="">
-                                <div>
-                                  The Undefeated mind
-                                    <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <div class="text-muted"></div>
-                                        <div><a href="#"><span class="red text-uppercase"><span
-                                                        class="fas fa-comment pr-1"></span> Update Book</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Alex Lickerman
-                        </td>
-                        <td>
-                           R899
-                        </td>
-                       <td>Legions of self-help authors rightly urge personal development as the key to happiness, but they typically fail to focus on its most important objective
-                       </td>
-                    </tr>
-                    <tr>
-                        <td class="item">
-                            <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/CM2ZYgCy/long-walk.webp "
-                                    alt="">
-                                <div>
-                                  Long Walk to freedom
-                                    <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <div class="text-muted"></div>
-                                        <div><a href="#"><span class="red text-uppercase"><span
-                                                        class="fas fa-comment pr-1"></span> Update Book</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td> <td>
-                            Nelson Mandela
-                        </td>
-                        <td>
-                           R499
-                        </td>
-                       <td>is an autobiography by South Africa's first democratically elected President Nelson Mandela, and it was first published in 1994 by Little
-                       </td>
-
-                    </tr>
-                    <tr>
-                        <td class="item">
-                            <div class="d-flex align-items-start">
-                                <img src="https://i.postimg.cc/RC7C8nL0/finding-me.webp"
-                                    alt="">
-                                <div>
-                                  Finding Me
-                                    <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <div class="text-muted"></div>
-                                        <div><a href="#"><span class="red text-uppercase"><span
-                                                        class="fas fa-comment pr-1"></span> Update Book</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td> <td>
-                            Viola Davis
-
-                        </td>
-                        <td>
-                           R399
-                        </td>
-                       <td> you will meet a little girl named Viola who ran from her past until she made a life changing decision to stop running forever.
-                       </td>
-
                     </tr>
                 </tbody>
             </table>
         </div>
-    
+
+    </div>
 </div>
