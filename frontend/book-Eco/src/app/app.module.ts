@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
+import { ViewbooksComponent } from './components/viewbooks/viewbooks.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AddbookComponent } from './components/addbook/addbook.component';
     RegisterComponent,
     NavbarComponent,
     HomeComponent,
-    AddbookComponent
+    AddbookComponent,
+    ViewbooksComponent
   ],
   imports: [
     BrowserModule
