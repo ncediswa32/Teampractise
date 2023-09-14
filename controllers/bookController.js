@@ -16,7 +16,7 @@ exports.getAllBooks = async (req, res)=>{
 
     Book.find()
     .then(data=>{
-        res.send(data)
+        res.status(200).send(data)
         console.log(data)
 
     })

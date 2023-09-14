@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
 import { ViewbooksComponent } from './components/viewbooks/viewbooks.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ViewbooksComponent } from './components/viewbooks/viewbooks.component';
     ViewbooksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

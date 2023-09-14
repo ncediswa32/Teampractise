@@ -12,20 +12,11 @@
  
 
         <!-- <table border="2" align="center" cellpadding="5" cellspacing="5"> -->
-
-            <tr>
-
-            <td>Book Id :</td>
-
-            <td> <input type="text" name="Book Id" size="48"> </td>
-
-            </tr>
-
             <tr>
 
             <td> Book Name:</td>
 
-            <td> <input type="text" name="book name" size="48"> </td>
+            <td> <input type="text" name="book name" size="48"#bookName> </td>
 
             </tr>
 
@@ -34,7 +25,7 @@
 
             <td>  Author :</td>
 
-            <td> <input type="text" name="author" size="48"> </td>
+            <td> <input type="text" name="author" size="48"#author> </td>
 
             </tr>
 
@@ -42,7 +33,7 @@
 
             <td> Selling Price :</td>
 
-            <td> <input type="text" name="selling price" size="48"> </td>
+            <td> <input type="text" name="selling price" size="48"#sellingPrice> </td>
 
             </tr>
 
@@ -50,7 +41,7 @@
 
             <td> Description: </td>
 
-            <td> <input type="text" name="Description" size="48"> </td>
+            <td> <input type="text" name="Description" size="48"#description> </td>
 
             </tr>
 
@@ -59,7 +50,7 @@
 
                 <td> Image:</td>
     
-                <td> <input type="text" name="Image" size="48"> </td>
+                <td> <input type="text" name="Image" size="48"#image> </td>
     
                 </tr>
 
@@ -69,7 +60,7 @@
 
             <td>
 
-            <input type="submit" value="submit">
+            <input type="button" value="submit"(click)="createBook(bookName.value, author.value, sellingPrice.value, description.value, image.value)">
 
             <input type="reset" value="Reset">
 

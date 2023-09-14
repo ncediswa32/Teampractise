@@ -1,0 +1,9 @@
+.card-body{
+  background-color: lightblue;
+
+}
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  background-color: lightgray;
+}

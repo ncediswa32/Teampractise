@@ -1,10 +1,17 @@
-.button {
-  position: absolute;
-  top: 0;
-  right: 0;
+.btn {
+
+ margin-left: 700px;
+ font-weight: bold;
+ background-color:lightblue;
+ color: white;
 }
 .form-control{
   position: relative;
-  left: 10px;
+  left: 700px;
 
+}
+.nav-link{
+  font-weight: bold;
+  margin-left: 10px;
+  text-align: inline;
 }
