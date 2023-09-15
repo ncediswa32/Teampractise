@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row ">
-      <div class="col-4 mt-3" *ngFor="let book of books">
-        <div class="card" style="width: 18rem; " >
-          <img [src]="book.image" class="card-img-top" alt="...">
+      <div class="col-4 mt-3" *ngFor="let book of books" id="cardfeature">
+        <div class="card" style="width: 18rem;" >
+          <img [src]="book.image" class="card-img-top" alt="..." style="height: 400px;">
           <div class="card-body">
             <h5 class="card-title">{{book.bookName}}</h5>
 
@@ -11,8 +11,7 @@
       </div>
   </div>
 
-
-  <!-- </div> -->
+  </div>
 
 
 

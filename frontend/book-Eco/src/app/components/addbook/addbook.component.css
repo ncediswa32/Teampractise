@@ -1,0 +1,54 @@
+form{
+    /* margin-left: 300px; */
+ margin-top: 00px;
+ background-color: lightgray;
+ width: 700px;
+position: fixed;
+left: 300px ;
+}
+h2{
+    margin-left: 100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+td{
+    margin-right: 30px;
+}
+.button{
+    margin-top: 3px;
+    margin-left: 60px;
+    background-color: lightblue;
+    /* font-weight: bold; */
+}
+.buttonone{
+    margin-top: 3px;
+    margin-left: 20px;
+    background-color: lightblue;
+    /* font-weight: bold; */
+}
+.name{
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.books{
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.auth{
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+.auth{
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.de{
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.value{
+    color: white;
+}

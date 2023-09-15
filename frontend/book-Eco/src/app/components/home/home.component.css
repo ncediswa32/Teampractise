@@ -1,5 +1,6 @@
 .card-body{
   background-color: lightblue;
+  height: 50%;
 
 }
 .card-title{
@@ -7,3 +8,5 @@
   font-weight: bold;
   background-color: lightgray;
 }
+
+
