@@ -10,8 +10,9 @@ import { HomeService } from 'src/app/services/home.service';
 export class AddbookComponent {
 
   books:any[]=[]
-   book:any ={}
-    createBook(bookName:string, author:string, sellingPrice:string, description:string, image:string){
+  book:any = {}
+  selectedBook?:Book
+  createBook(bookName:string, author:string, sellingPrice:string, description:string, image:string){
       this.book.bookName = bookName
       this.book.image = image
       this.book.author = author
@@ -20,8 +21,10 @@ export class AddbookComponent {
       this.homeService.createBook(this.book as Book)
       .subscribe(book => { this.books.push(book)})
       console.log(this.books)
-    }
-    constructor( private homeService:  HomeService){
+  }
+  selectBook(book:Book):void{
+    console.log(book)
 
-    }
+  }
+  constructor( private homeService:  HomeService){}
 }
