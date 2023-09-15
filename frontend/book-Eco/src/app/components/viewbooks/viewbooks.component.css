@@ -294,3 +294,9 @@ button.btn:hover{
         padding: 10px;
     }
 }
+
+.sty{
+  display: flex;
+justify-content: center;
+
+}
