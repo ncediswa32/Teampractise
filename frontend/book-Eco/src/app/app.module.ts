@@ -10,7 +10,8 @@ import { AddbookComponent } from './components/addbook/addbook.component';
 import { ViewbooksComponent } from './components/viewbooks/viewbooks.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { ViewbyoneComponent } from './components/viewbyone/viewbyone.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     NavbarComponent,
     HomeComponent,
     AddbookComponent,
-    ViewbooksComponent
+    ViewbooksComponent,
+    ViewbyoneComponent
   ],
   imports: [
     BrowserModule,
