@@ -9,8 +9,9 @@ import { HomeService } from 'src/app/services/home.service';
 })
 export class ViewbooksComponent {
 
-
+  items:any
   books:any[]=[]
+
   selectBook?: any;
   ngOnInit(): void {
     this.getBook()
@@ -21,10 +22,13 @@ export class ViewbooksComponent {
     this.homeService.getBooks()
     .subscribe(book =>{
       this.books =book
-      // console.log(this.books)
-      
+      const items = this.books.length
+      this.items = items
+
+
     })
   }
+  
   deleteBook(book: any): void {
     this.books = this.books.filter(b => b !== book)
     this.homeService.deleteBook(book._id).subscribe()
@@ -43,6 +47,5 @@ export class ViewbooksComponent {
     this.homeService.updateHero(this.selectBook,id).subscribe(() => window.location.reload())
    }
     // console.log(this.selectBook)
-
   }
 }

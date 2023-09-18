@@ -84,5 +84,20 @@ exports.getone = (req, res)=>{
     .catch(err=>{
         res.status(500).send({msg: `Error deleting Book with id=${id},Error: ${err}`})
     })
-
 }
+
+exports.searchBookByName = async (req, res) => {
+    const {bookName} = req.query;
+
+    try {
+        console.log(bookName)
+        var all_books = bookName ? {bookName: {$regex: new RegExp(bookName), $options: 'i'} }:{};
+
+        const book = await Book.find(all_books)
+        res.json(book)
+        console.log(book)
+    } catch (error) {
+        res.status(500).json({error: 'Oops Internal Server Error'})
+    }
+}
+
