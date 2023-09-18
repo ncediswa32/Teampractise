@@ -8,7 +8,6 @@ router.delete('/:id', bookController.deleteOne);
 router.put('/:id',bookController.updateBook);
 router.get('/:id',bookController.getone)
 
-
 // Implement other routes (GET /books/:id, PUT /books/:id, DELETE /books/:id) here...
 
 module.exports = router;

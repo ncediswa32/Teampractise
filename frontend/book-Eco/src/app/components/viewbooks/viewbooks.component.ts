@@ -25,6 +25,7 @@ export class ViewbooksComponent {
       
     })
   }
+  
   deleteBook(book: any): void {
     this.books = this.books.filter(b => b !== book)
     this.homeService.deleteBook(book._id).subscribe()
@@ -43,6 +44,5 @@ export class ViewbooksComponent {
     this.homeService.updateHero(this.selectBook,id).subscribe(() => window.location.reload())
    }
     // console.log(this.selectBook)
-
   }
 }

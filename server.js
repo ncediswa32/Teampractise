@@ -7,14 +7,21 @@ const port = 3000;
 
 app.use(cors())
 
-mongoose.connect('mongodb://127.0.0.1:27017/mydb', {
+mongoose.connect('mongodb://127.0.0.1:27017/books', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(()=> console.log("Connected to database successfully"))
-;
+.then(()=> console.log("Connected to database successfully"));
+
 app.use(express.json());
 app.use('/api/books/', bookRoutes);
+
+// Use the item routes
+const searchRoutes = require('./routes/searchRoute');
+app.use('/books', searchRoutes);
+
+
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
