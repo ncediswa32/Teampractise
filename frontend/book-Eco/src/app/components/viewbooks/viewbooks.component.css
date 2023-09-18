@@ -553,3 +553,6 @@ justify-content: center;
 .card-1{
   height: 500px;
 }
+.text-uppercase{
+  background-color: lightblue;
+}
