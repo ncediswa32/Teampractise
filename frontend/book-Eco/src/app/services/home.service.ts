@@ -24,7 +24,6 @@ export class HomeService {
   console.log(this.api)
   return this.http.post<Book>(`${this.api}/create`,book, this.httpOptions)
 
-
   }
   deleteBook(id: number): Observable<Book> {
     return this.http.delete<Book>(`${this.api}/${id}`, this.httpOptions)
