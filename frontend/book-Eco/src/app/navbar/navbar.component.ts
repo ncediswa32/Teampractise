@@ -8,6 +8,7 @@ import { Book } from '../books';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  select?:any
 books: any
 searchBox = ''
 constructor(private homeService: HomeService) {}
@@ -16,8 +17,12 @@ constructor(private homeService: HomeService) {}
   console.log(this.searchBox);
   this.homeService.searchBook(this.searchBox).subscribe(data=>{
      this.books = data;
-     console.log(data);
+    //  console.log(data);
   })
+ }
+ onSearch(book: string):void{
+  this.select = book
+  console.log(book)
  }
 }
 
