@@ -2,7 +2,7 @@
 
  margin-left: 700px;
  font-weight: bold;
- background-color:black;
+ background-color:black !important;
  color:white;
 }
 .form-control{
