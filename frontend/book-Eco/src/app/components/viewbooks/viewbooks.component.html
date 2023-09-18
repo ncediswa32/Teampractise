@@ -3,26 +3,17 @@
     <div class="d-flex align-items-center justify-content-between">
         <div class="d-flex flex-column">
             <div class="h3">View Books</div>
-            <div class="text-uppercase">6 sublists</div>
         </div>
         <div class="ml-auto btn"><span class="fas fa-cog"></span></div>
         <div class="btn" id="sub">
             + Add sublist
         </div>
     </div>
-
-    <div class="notification alert alert-dismissible fade show text-white bg-dark d-flex align-items-center my-3 text-justify"
-        role="alert">
-        <span class="far fa-bell pr-2"></span>
-        You've got 6 books new items on your list
-
-    </div>
-    
     <div id="table" class="bg-white rounded">
         <div class="d-md-flex align-items-md-center px-3 pt-3">
             <div class="d-flex flex-column">
                 <div class="h4 font-weight-bold">Book List</div>
-                <div class="text-muted">6 items</div>
+                <div class="text-muted">{{items}} items</div>
             </div>
         </div>
         <hr>
@@ -41,7 +32,7 @@
                     <tr *ngFor="let book of books">
                         <td class="item">
                             <div class="d-flex align-items-start">
-                                <img [src]="book.image" alt="" class="bookimg m-3">
+                                <img [src]="book.image" alt="" class="bookimg w-100 vh-50 m-3">
                                 <div>
                                     {{book.bookName}}
                                     <div class="text-uppercase new"><span class="fas fa-star"></span>new</div>
@@ -60,7 +51,7 @@
                             {{book.author}}
                         </td>
                         <td>
-                            {{book.sellingPrice}}
+                            R {{book.sellingPrice}}
                         </td>
                         <td>{{book.description}}
                         </td>
@@ -80,9 +71,6 @@
     </div>
 </div>
 
-
-
-  
   <!-- Modal -->
   <div class="modal fade h-vh-2" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md">
@@ -97,27 +85,32 @@
                         <div class="card-body" *ngIf="selectBook" >
                             <form method="POST">
                                 <div class="input-group">
+                                  <label for="">Book Title </label>
                                     <input class="input--style-1" type="text" placeholder="Book Title " name="name"  [(ngModel)]="selectBook.bookName" #bookName>
                                 </div>
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group">
+                                          <label for="">Author</label>
                                             <input class="input--style-1 js-datepicker" type="text" placeholder="Author" name="author"  [(ngModel)]="selectBook.author" #author>
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group">
+                                          <label for="">Book Price</label>
                                             <input class="input--style-1 js-datepicker" type="text" placeholder="Book Price" name="bookPrice"  [(ngModel)]="selectBook.sellingPrice" size="48"#sellingPrice>
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="input-group">
+                                  <label for="">Book Description</label>
                                     <input class="input--style-1 js-datepicker" type="text" placeholder="Description" name="description" [(ngModel)]="selectBook.description" size="48" #description >
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                                 <div class="input-group">
+                                  <label for="">Image URL</label>
                                     <input class="input--style-1 js-datepicker" type="text" placeholder="URL Image" name="image" [(ngModel)]="selectBook.image" #image >
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
