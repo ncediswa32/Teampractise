@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from 'src/app/books';
 import { HomeService } from 'src/app/services/home.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomeComponent {
   books: any[] = [];
 
   constructor(private homeService: HomeService){}
- 
+  select?:any
   ngOnInit(): void {
     this.getBook()
   }
@@ -19,6 +20,10 @@ export class HomeComponent {
     this.homeService.getBooks()
     .subscribe(books =>{this.books = books})
     console.log(this.books)
+  }
+  onSelect(book:string){
+     this.select = book
+
   }
 
 }
