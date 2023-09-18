@@ -8,13 +8,15 @@ import { Book } from '../books';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+books: any
+searchBox = ''
 constructor(private homeService: HomeService) {}
  
- searchTitle(searchBox:string) {
-  this.homeService.searchBook(searchBox).subscribe(data=>{
-    //  const book = data.filter(data =>  searchBox == data.bookName)
-     console.log(data)
+ searchTitle() {
+  console.log(this.searchBox);
+  this.homeService.searchBook(this.searchBox).subscribe(data=>{
+     this.books = data;
+     console.log(data);
   })
  }
 }

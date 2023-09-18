@@ -24,8 +24,12 @@
           <li class="nav-item "> <a class="nav-link text-light w-100"  routerLink="/add">Add Books</a> </li>
           <li class="nav-item "> <a class="nav-link text-light w-100"  routerLink="view">View Books</a> </li>
       </ul>
-      <input type="text" style="margin-left: 600px; width: 250px; border-radius: 5px;" #searchBox (input)="searchTitle(searchBox.value)">
-
+      <input type="text" style="margin-left: 600px; width: 250px; border-radius: 5px;" [(ngModel)]="searchBox">
+      <button type="button" (click)="searchTitle()">Search</button>
+  
+      <div *ngFor="let book of books">
+        {{book.bookName}}
+      </div>
       <!-- <form class="d-flex container">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
       </form> -->

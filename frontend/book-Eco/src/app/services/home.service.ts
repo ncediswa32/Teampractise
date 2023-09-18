@@ -9,7 +9,7 @@ import * as bonjour from 'bonjour';
 })
 export class HomeService {
   api = "http://localhost:3000/api/books/"
-  searchApi = "http://localhost:3000/books/search"
+  // searchApi = "http://localhost:3000/books/search"
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -33,16 +33,14 @@ export class HomeService {
     return this.http.put(`${this.api}/${id}` , book,this.httpOptions)
   }
 /* GET heroes whose name contains search term */
-searchBook(title: string): Observable<Book[]> {
-  if (!title.trim()) {
-    // if not search term, return empty hero array.
-    return of([]);
+searchBook(title: string): Observable<any> {
+    return this.http.get<any>(this.api+`/?bookName=${title}`)
   }
-return this.http.get<Book[]>(`${this.searchApi}/?booKName=${title}`)
+
   
 
 
 
 }
 
-}
+

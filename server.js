@@ -16,9 +16,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/books', {
 app.use(express.json());
 app.use('/api/books/', bookRoutes);
 
-// Use the item routes
-const searchRoutes = require('./routes/searchRoute');
-app.use('/books', searchRoutes);
 
 
 
