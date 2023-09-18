@@ -151,14 +151,14 @@ div.new{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     letter-spacing: 0.08rem;
-    background-color: lightblue; 
+    background-color: lightblue;
     color: #363a36;
     display: inline-block;
 }
 .table tbody td.item img{
-    width: 50% !important; 
+    width: 200px !important;
 
- height: 30%;
+ height: 200px !important;
     /* object-fit: contain; */
 }
 .table thead th.header{
@@ -318,7 +318,7 @@ justify-content: center;
    .font-robo {
     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
   }
-  
+
   /* ==========================================================================
      #GRID
      ========================================================================== */
@@ -332,7 +332,7 @@ justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  
+
   .row-space {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -340,13 +340,13 @@ justify-content: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  
+
   .col-2 {
     width: -webkit-calc((100% - 60px) / 2);
     width: -moz-calc((100% - 60px) / 2);
     width: calc((100% - 60px) / 2);
   }
-  
+
   @media (max-width: 767px) {
     .col-2 {
       width: 100%;
@@ -367,13 +367,13 @@ justify-content: center;
     font-size: 14px;
     font-family: inherit;
   }
-  
+
   .input-group {
     position: relative;
     margin-bottom: 30px;
     border-bottom: 2px solid #ccc;
   }
-  
+
   .input-icon {
     position: absolute;
     font-size: 18px;
@@ -387,63 +387,63 @@ justify-content: center;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  
+
   .input--style-1 {
     padding: 9px 0;
     color: #666;
   }
-  
+
   .input--style-1::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: #555;
   }
-  
+
   .input--style-1:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: #555;
     opacity: 1;
   }
-  
+
   .input--style-1::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: #555;
     opacity: 1;
   }
-  
+
   .input--style-1:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: #555;
   }
-  
+
   .input--style-1:-ms-input-placeholder {
     /* Microsoft Edge */
     color: #555;
   }
-  
+
   /* ==========================================================================
      #SELECT2
      ========================================================================== */
   .select--no-search .select2-search {
     display: none !important;
   }
-  
+
   .rs-select2 .select2-container {
     width: 100% !important;
     outline: none;
   }
-  
+
   .rs-select2 .select2-container .select2-selection--single {
     outline: none;
     border: none;
     height: 34px;
   }
-  
+
   .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
     line-height: 34px;
     padding-left: 0;
     color: #555;
   }
-  
+
   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {
     height: 32px;
     right: 4px;
@@ -463,11 +463,11 @@ justify-content: center;
     -ms-flex-align: center;
     align-items: center;
   }
-  
+
   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b {
     display: none;
   }
-  
+
   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {
     font-family: "Material-Design-Iconic-Font";
     content: '\f2f9';
@@ -478,7 +478,7 @@ justify-content: center;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
-  
+
   .rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
@@ -486,7 +486,7 @@ justify-content: center;
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg);
   }
-  
+
   .select2-container--open .select2-dropdown--below {
     border: none;
     -webkit-border-radius: 3px;
@@ -499,14 +499,14 @@ justify-content: center;
     margin-top: 5px;
     overflow: hidden;
   }
-  
+
   /* ==========================================================================
      #TITLE
      ========================================================================== */
   .title {
     margin-bottom: 37px;
   }
-  
+
   /* ==========================================================================
      #CARD
      ========================================================================== */
@@ -517,19 +517,19 @@ justify-content: center;
     border-radius: 3px;
     background: #fff;
   }
-  
+
   .card-1 {
     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     height: 400px;
   }
-  
+
   .card-1 .card-heading {
     /* background: url("../images/bg-head-02.jpg") center center/cover no-repeat; */
     padding-top: 20px;
   }
-  
+
   .card-1 .card-body {
     padding: 0 90px;
 
@@ -546,4 +546,10 @@ justify-content: center;
       padding-bottom: 40px;
     }
   }
-  
+
+.h-vh-2{
+  height: 900px;
+}
+.card-1{
+  height: 500px;
+}
