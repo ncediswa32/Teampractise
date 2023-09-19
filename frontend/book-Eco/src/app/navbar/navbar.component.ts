@@ -12,8 +12,12 @@ export class NavbarComponent {
 books: any
 searchBox = ''
 constructor(private homeService: HomeService) {}
+
+isSearching: boolean = false
  
  searchTitle() {
+  this.isSearching = !this.isSearching;
+  
   console.log(this.searchBox);
   this.homeService.searchBook(this.searchBox).subscribe(data=>{
      this.books = data;

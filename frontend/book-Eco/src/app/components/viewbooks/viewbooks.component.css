@@ -556,3 +556,8 @@ justify-content: center;
 .text-uppercase{
   background-color: lightblue;
 }
+
+.booking{
+  width: 200px !important;
+  height: 200px !important;
+}
