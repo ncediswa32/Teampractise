@@ -1,9 +1,16 @@
 .card-body{
   background-color: lightblue;
+  height: 50%;
 
 }
 .card-title{
   text-align: center;
   font-weight: bold;
-  background-color: lightgray;
+  padding-top: 3px;
+  /* background-color: lightgray; */
+  height: 30px;
+  padding-bottom:  10px;
+  border-radius: 10px;
 }
+
+

@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'add', component: AddbookComponent },
   { path: 'view', component: ViewbooksComponent }
-  
+
 ];
 
 
