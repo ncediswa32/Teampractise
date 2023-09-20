@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(cors())
 
-mongoose.connect('mongodb://127.0.0.1:27017/mydb', {
+mongoose.connect('mongodb+srv://mfekethothulane:mongo@mfekethothulane021.plal87j.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
