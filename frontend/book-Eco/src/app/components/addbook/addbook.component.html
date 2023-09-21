@@ -3,36 +3,36 @@
       <div class="card card-1">
           <div class="card-heading"></div>
           <div class="card-body"  >
-              <form method="POST">
+              <form  [formGroup]="cmsForm" (ngSubmit)="createBook()">
                   <div class="input-group">
-                      <input class="input--style-1" type="text" placeholder="Book Title " name="name"   #bookName>
+                      <input class="input--style-1" type="text" placeholder="Book Title " name="name" formControlName="bookName"  #bookName>
                   </div>
                   <div class="row row-space">
                       <div class="col-2">
                           <div class="input-group">
-                              <input class="input--style-1 js-datepicker" type="text" placeholder="Author" name="author"   #author>
+                              <input class="input--style-1 js-datepicker" type="text" placeholder="Author" formControlName="author"  #author>
                               <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                           </div>
                       </div>
                       <div class="col-2">
                           <div class="input-group">
-                              <input class="input--style-1 js-datepicker" type="text" placeholder="R" name="bookPrice "  size="48"#sellingPrice>
+                              <input class="input--style-1 js-datepicker" type="text" placeholder="R" name="bookPrice " formControlName="sellingPrice"  size="48"#sellingPrice>
                               <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                           </div>
                       </div>
                   </div>
                   <div class="input-group">
-                      <input class="input--style-1 js-datepicker" type="text" placeholder="Description" name="description"  size="48" #description >
-                      <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                      <input class="input--style-1 js-datepicker" type="text" placeholder="Description" name="description" formControlName="description" size="48" #description >
+                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                   </div>
                   <div class="input-group">
-                      <input class="input--style-1 js-datepicker" type="text" placeholder="URL Image" name="image"  #image >
+                      <input class="input--style-1 js-datepicker" (change)="getSelectedFile($event)" type="file" placeholder="URL Image"  name="image"  #image >
                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                   </div>
                   <div class="p-t-20">
-                      <button class="btn btn--radius btn--green bg-dark w-100 text-light" type="submit"(click)="createBook(bookName.value,author.value, sellingPrice.value, description.value, image.value)" >Submit</button>
+                      <button class="btn btn--radius btn--green bg-dark w-100 text-light" type="submit"(click)="createBook()" >Submit</button>
                   </div>
-              </form>
+                </form>
               <div class="container mb-3" style="margin-bottom: 20px;" *ngIf="successMessage">
                 <div class="thank-you-pop d-flex container mt-4 " style="justify-content: center;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-success mt-1" viewBox="0 0 16 16">

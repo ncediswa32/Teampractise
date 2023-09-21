@@ -15,6 +15,8 @@ mongoose.connect('mongodb+srv://mfekethothulane:mongo@mfekethothulane021.plal87j
 
 app.use(express.json());
 app.use('/api/books/', bookRoutes);
+app.use('/images', express.static('images'));
+
 
 
 

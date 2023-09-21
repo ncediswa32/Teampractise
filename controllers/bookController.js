@@ -2,7 +2,18 @@ const Book = require('../models/book');
 
 exports.createBook = async (req, res) => {
   try {
-    const book = new Book(req.body);
+    const { bookName, author, sellingPrice, description} = req.body
+    console.log(req.body)
+    const image = "http://localhost:3300/images/" ;
+    const book = new Book({
+        bookName,
+        author,
+        sellingPrice,
+        description,
+        image
+        
+    });
+   
     const savedBook = await book.save();
     res.status(201).json(savedBook);
   } catch (error) {

@@ -8,7 +8,7 @@ import * as bonjour from 'bonjour';
   providedIn: 'root'
 })
 export class HomeService {
-  api = "http://localhost:3000/api/books/"
+  api = "http://localhost:3000/api/books"
   // searchApi = "http://localhost:3000/books/search"
 
   httpOptions = {
@@ -21,9 +21,8 @@ export class HomeService {
     return this.http.get<any[]>(`${this.api}/get`)
 
   }
-  createBook(book:Book):Observable<Book>{
-  console.log(this.api)
-  return this.http.post<Book>(`${this.api}/create`,book, this.httpOptions)
+  createBook(book:any):Observable<any>{
+  return this.http.post<any>(`${this.api}/create`,book)
 
   }
   deleteBook(id: number): Observable<Book> {
